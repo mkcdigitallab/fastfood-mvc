@@ -1,0 +1,181 @@
+:root {
+  --bleu-nuit: #2B2118;
+  --bleu-clair: #C97B3D;
+  --vert-sante: #E8622C;
+  --creme: #F7F5F0;
+  --gris-texte: #45525A;
+  --rouge-alerte: #D9534F;
+  --radius: 10px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  background: var(--creme);
+  color: var(--gris-texte);
+}
+
+header.topbar {
+  background: var(--bleu-nuit);
+  color: white;
+  padding: 18px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header.topbar .logo {
+  font-weight: 700;
+  font-size: 1.2rem;
+  letter-spacing: 0.5px;
+}
+
+header.topbar .logo span { color: var(--vert-sante); }
+
+.container {
+  max-width: 760px;
+  margin: 32px auto;
+  padding: 0 20px;
+}
+
+.card {
+  background: white;
+  border-radius: var(--radius);
+  padding: 28px;
+  box-shadow: 0 2px 10px rgba(27, 58, 75, 0.08);
+  margin-bottom: 20px;
+}
+
+h1 {
+  color: var(--bleu-nuit);
+  font-size: 1.5rem;
+  margin-top: 0;
+}
+
+label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--bleu-nuit);
+  margin: 14px 0 6px;
+}
+
+input, select {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #D8D8D8;
+  border-radius: 6px;
+  font-size: 0.95rem;
+}
+
+.row { display: flex; gap: 16px; }
+.row > div { flex: 1; }
+
+button.primary {
+  margin-top: 22px;
+  background: var(--vert-sante);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button.secondary {
+  margin-top: 22px;
+  margin-left: 10px;
+  background: transparent;
+  color: var(--gris-texte);
+  border: 1px solid #D8D8D8;
+  padding: 12px 24px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.creneau {
+  display: inline-block;
+  padding: 8px 14px;
+  margin: 5px;
+  border-radius: 20px;
+  background: #E8F5EF;
+  color: var(--vert-sante);
+  border: 1px solid var(--vert-sante);
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.creneau.reserve {
+  background: #F5EAEA;
+  color: #B0AAAA;
+  border-color: #DDD;
+  text-decoration: line-through;
+  cursor: not-allowed;
+}
+
+.badge {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.badge.libre { background: #E8F5EF; color: var(--vert-sante); }
+.badge.reserve { background: #FDECEA; color: var(--rouge-alerte); }
+
+.medecin-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px;
+  border: 1px solid #EEE;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.medecin-item .nom { font-weight: 600; color: var(--bleu-nuit); }
+.medecin-item .specialite { font-size: 0.85rem; color: var(--bleu-clair); }
+
+.rdv-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  border-left: 4px solid var(--vert-sante);
+  background: #FAFAFA;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+
+.rdv-item .details strong { color: var(--bleu-nuit); }
+
+.btn-annuler {
+  background: transparent;
+  color: var(--rouge-alerte);
+  border: 1px solid var(--rouge-alerte);
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+
+.modal-confirm {
+  border: 2px dashed var(--rouge-alerte);
+  background: #FFF8F7;
+  padding: 18px;
+  border-radius: 8px;
+  margin-top: 16px;
+}
+
+.notif-banner {
+  background: #E8F5EF;
+  border-left: 4px solid var(--vert-sante);
+  padding: 12px 16px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  margin-top: 16px;
+}
