@@ -1,10 +1,11 @@
 {
   "name": "fastfood-mvc",
   "version": "1.0.0",
-  "description": "Systeme de Gestion de Commandes Fast-Food - Architecture MVC",
+  "description": "FastFood — application de commande Vue 3 et Express",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js"
+    "start": "node app.js",
+    "build": "npm --prefix frontend install && npm --prefix frontend run build"
   },
   "dependencies": {
     "express": "^4.19.2"
